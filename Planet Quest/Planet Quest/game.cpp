@@ -45,7 +45,7 @@ CGame::Initialise(HINSTANCE _hInstance, HWND _hWnd, int _iWidth, int _iHeight)
 	m_hMainWindow = _hWnd;
 
 	m_pLevel[0] = CLevel();
-	m_pLevel[0].Initialise(800,600);
+	m_pLevel[0].Initialise(800,600,1);
 
 	m_pClock = new CClock();
 	VALIDATE(m_pClock->Initialise());

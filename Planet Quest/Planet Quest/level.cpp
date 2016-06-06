@@ -1,16 +1,18 @@
 // Library Includes
 
 // Local Includes
+#include <vector>
 #include "Game.h"
 #include "utils.h"
 #include "backbuffer.h"
 #include "framecounter.h"
-#include "background.h"
+#include "scene.h"
 #include "sprite.h"
 #include "resource.h"
+#include "Level.h"
 
 // This Include
-#include "Level.h"
+
 
 // Static Variables
 
@@ -19,10 +21,10 @@
 // Implementation
 
 CLevel::CLevel()
-	:m_fpsCounter(0)
-	, m_pBackground(0)
+	:m_pScenes(0)
+	, m_fpsCounter(0)
 {
-	m_pBackground = new CBackGround();
+	
 }
 
 CLevel::~CLevel()
@@ -30,27 +32,38 @@ CLevel::~CLevel()
 	delete m_fpsCounter;
 	m_fpsCounter = 0;
 
-	delete m_pBackground;
-	m_pBackground = 0;
+	if (m_pScenes != 0)
+	{
+		delete[] m_pScenes;
+		m_pScenes = 0;
+	}
 
 }
 
 bool
-CLevel::Initialise(int _iWidth, int _iHeight)
+CLevel::Initialise(int _iWidth, int _iHeight, int _iNumScenes)
 {
+	m_iNumScenes = _iNumScenes;
+	m_pScenes = new CScene[m_iNumScenes];
+
+	std::vector<CSprite*> vSprites;
 	CSprite* bkgSprite = new CSprite();
 	bkgSprite->Initialise(IDB_BITMAP2, IDB_BITMAP3);
 	bkgSprite->SetX(400);
 	bkgSprite->SetY(300);
-	m_pBackground = new CBackGround();
-	VALIDATE(m_pBackground->Initialise(bkgSprite));
+
+	vSprites.push_back(bkgSprite);
+
+	CScene cNewScene = CScene();
+	cNewScene.Initialise(1, vSprites);
+	m_pScenes[0] = cNewScene;
 	return false;
 }
 
 void
 CLevel::Draw()
 {
-	m_pBackground->Draw();
+	m_pScenes->Draw();
 	
 	//Draw other stuff
 
@@ -61,8 +74,6 @@ CLevel::Draw()
 void
 CLevel::Process(float _fDeltaTick)
 {
-	m_pBackground->Process(_fDeltaTick);
-
 	//Other processes
 
 	m_fpsCounter->CountFramesPerSecond(_fDeltaTick);
