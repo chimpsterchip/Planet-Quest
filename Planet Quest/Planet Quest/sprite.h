@@ -40,7 +40,7 @@ protected:
 
 private:
 //    CSprite(const CSprite& _kr);
-    CSprite& operator= (const CSprite& _kr);
+    //CSprite& operator= (const CSprite& _kr);
 
     // Member Variables
 public:

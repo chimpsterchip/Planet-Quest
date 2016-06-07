@@ -3,20 +3,16 @@
 #if !defined(__LEVEL_H__)
 #define __LEVEL_H__
 
-// Library Includes
+
 #include <vector>
 #include <string>
 
-// Local Includes
 
-// Types
-
-// Constants
-
-// Prototypes
 class CFPSCounter;
 class CBackGround;
+class CScene;
 
+//A Level represents a planet and holds scenes.
 class CLevel
 {
     // Member Functions
@@ -24,7 +20,7 @@ public:
     CLevel();
     virtual ~CLevel();
 
-    virtual bool Initialise(int _iWidth, int _iHeight);
+    virtual bool Initialise(int _iWidth, int _iHeight, int _iNumScenes);
 
     virtual void Draw();
     virtual void Process(float _fDeltaTick);
@@ -42,7 +38,8 @@ private:
 public:
 
 protected:
-	CBackGround* m_pBackground;
+	int m_iNumScenes;
+	CScene* m_pScenes;
 	CFPSCounter* m_fpsCounter;
 
     int m_iWidth;

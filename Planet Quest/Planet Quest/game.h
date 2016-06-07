@@ -3,19 +3,18 @@
 #if !defined(__GAME_H__)
 #define __GAME_H__
 
-// Library Includes
+
 #include <windows.h>
 #include "level.h"
 #include "backbuffer.h"
-// Local Includes
+
 #include "clock.h"
 
-// Types
 
-// Constants
 
-// Prototypes
 
+
+//A Game holds and manages Levels
 class CGame
 {
 	// Member Functions

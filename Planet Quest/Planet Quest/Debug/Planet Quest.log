@@ -1,31 +1,31 @@
-﻿Build started 6/06/2016 1:42:24 p.m..
-     1>Project "H:\Visual Studio Projects\Planet Quest\Planet Quest\Planet Quest.vcxproj" on node 2 (Build target(s)).
+﻿Build started 7/06/2016 9:39:12 a.m..
+     1>Project "G:\Planet Quest\Planet Quest\Planet Quest.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt backbuffer.cpp background.cpp clock.cpp framecounter.cpp game.cpp level.cpp main.cpp sprite.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt backbuffer.cpp clock.cpp framecounter.cpp game.cpp level.cpp main.cpp scene.cpp sprite.cpp
          sprite.cpp
+         scene.cpp
          main.cpp
          level.cpp
          game.cpp
          framecounter.cpp
          clock.cpp
-         background.cpp
          backbuffer.cpp
          Generating Code...
        ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Planet Quest.res" "Planet Quest.rc" 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Visual Studio Projects\Planet Quest\Debug\Planet Quest.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\Visual Studio Projects\Planet Quest\Debug\Planet Quest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Visual Studio Projects\Planet Quest\Debug\Planet Quest.lib" /MACHINE:X86 "Debug\Planet Quest.res"
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Planet Quest\Debug\Planet Quest.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Planet Quest\Debug\Planet Quest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Planet Quest\Debug\Planet Quest.lib" /MACHINE:X86 "Debug\Planet Quest.res"
          Debug\backbuffer.obj
-         Debug\background.obj
          Debug\clock.obj
          Debug\framecounter.obj
          Debug\game.obj
          Debug\level.obj
          Debug\main.obj
+         Debug\scene.obj
          Debug\sprite.obj
-         Planet Quest.vcxproj -> H:\Visual Studio Projects\Planet Quest\Debug\Planet Quest.exe
-     1>Done Building Project "H:\Visual Studio Projects\Planet Quest\Planet Quest\Planet Quest.vcxproj" (Build target(s)).
+         Planet Quest.vcxproj -> G:\Planet Quest\Debug\Planet Quest.exe
+     1>Done Building Project "G:\Planet Quest\Planet Quest\Planet Quest.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:02:25.07
+Time Elapsed 00:00:09.63
